@@ -10,7 +10,6 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    // canActivate: [authGuard], 
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   },
   { 
@@ -24,7 +23,7 @@ const routes: Routes = [
     loadChildren: () => import('./features/parent/parent.module').then(m => m.ParentModule) 
   },
   { 
-    path: 'theacher', 
+    path: 'teacher', // Corrected typo
     // canActivate: [authGuard], 
     loadChildren: () => import('./features/teacher/teacher.module').then(m => m.TeacherModule) 
   },
@@ -35,7 +34,6 @@ const routes: Routes = [
   },
   { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
   { path: '**', redirectTo: 'auth/login' } // Wildcard route
-  
 ];
 
 @NgModule({
