@@ -43,5 +43,8 @@ src/
 │   ├── app.module.ts
 ├── assets/
 ├── environments/
+│   ├── environment.ts
+│   ├── environment.prod.ts
+│   └── environment.staging.ts
 ├── main.ts
 └── index.html
