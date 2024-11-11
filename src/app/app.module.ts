@@ -26,10 +26,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CoreModule } from './core/core.module';
 import { RouterModule } from '@angular/router';
-import { RegisterComponent } from './features/auth/register/register.component';
-import { HeaderComponent } from './features/auth/header/header.component';
-import { FooterComponent } from './features/auth/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
+import { WebsiteModule } from './features/website/website.module';
 
 @NgModule({
   declarations: [
@@ -42,6 +40,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     BrowserAnimationsModule,
     CoreModule,
+    WebsiteModule,
     // Material Start
     MatButtonModule,
     MatToolbarModule,

@@ -1,0 +1,23 @@
+/* styles.css */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .d-flex {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.navbar .navbar-brand img {
+  height: 50px;
+}
+
+.navbar .btn {
+  margin-left: auto;
+}
+
+.nav-link{
+  color: #404040;
+}

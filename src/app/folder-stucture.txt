@@ -11,33 +11,50 @@ src/
 │   ├── services/
 │   │   └── apiservice.ts
 │   ├── shared/
+│   │   ├── headerComponent/
+│   │   ├── footerComponent/
 │   │   ├── pipes/
 │   │   ├── directives/
 │   │   ├── modelPopups/
 │   │   └── shared.module.ts
 │   ├── features/
 │   │   ├── auth/
-│   │   │   ├── loginComponent
-│   │   │   ├── registerComponent
-│   │   │   ├── headerComponent
-│   │   │   ├── footerComponent
+│   │   │   ├── loginComponent/
+│   │   │   ├── registerComponent/
 │   │   │   ├── auth-routing.module.ts
 │   │   ├── admin/
-│   │   │   ├── dashboardComponent
+│   │   │   ├── admin-mainComponent/
+│   │   │   ├── dashboardComponent/
 │   │   │   ├── admin-routing.module.ts
 │   │   │   └── admin.module.ts
 │   │   ├── parent/
-│   │   │   ├── dashboardComponent
+│   │   │   ├── parent-mainComponent/
+│   │   │   ├── dashboardComponent/
 │   │   │   ├── parent-routing.module.ts
 │   │   │   └── parent.module.ts
 │   │   ├── teacher/
-│   │   │   ├── dashboardComponent
+│   │   │   ├── teacher-mainComponent/
+│   │   │   ├── dashboardComponent/
 │   │   │   ├── teacher-routing.module.ts
 │   │   │   └── teacher.module.ts
 │   │   ├── therapist/
-│   │   │   ├── dashboardComponent
+│   │   │   ├── therapist-mainComponent/
+│   │   │   ├── dashboardComponent/
 │   │   │   ├── therapist-routing.module.ts
 │   │   │   └── therapist.module.ts
+│   │   ├── website/
+│   │   │   ├── mainComponent/
+│   │   │   ├── headerComponent/
+│   │   │   ├── footerComponent/
+│   │   │   ├── homeComponent/
+│   │   │   ├── aboutComponent/
+│   │   │   ├── resourceComponent/
+│   │   │   ├── podcastComponent/
+│   │   │   ├── blogsComponent/
+│   │   │   ├── contactComponent/
+│   │   │   ├── bookcallComponent/
+│   │   │   ├── website-routing.module.ts
+│   │   │   └── website.module.ts
 │   ├── app-routing.module.ts
 │   ├── app.component.ts
 │   ├── app.module.ts

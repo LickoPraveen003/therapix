@@ -3,16 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
         LoginComponent,
-        RegisterComponent,
-        HeaderComponent,
-        FooterComponent
+        RegisterComponent
     ],
     imports: [
         CommonModule,
@@ -21,9 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     ],
     exports: [
         LoginComponent,
-        RegisterComponent,
-        HeaderComponent,
-        FooterComponent
+        RegisterComponent
     ]
 })
 export class AuthModule { }

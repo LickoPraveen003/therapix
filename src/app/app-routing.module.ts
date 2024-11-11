@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
+import { MainComponent } from './features/website/main/main.component';
+import { MainAdminComponent } from './features/admin/main-admin/main-admin.component';
 
 const routes: Routes = [
   { 
@@ -14,6 +16,7 @@ const routes: Routes = [
   },
   { 
     path: 'admin', 
+    component: MainAdminComponent,
     // canActivate: [authGuard], 
     loadChildren: () => import('./features/admin/admin.module').then(m => m.AdminModule) 
   },
@@ -32,8 +35,13 @@ const routes: Routes = [
     // canActivate: [authGuard], 
     loadChildren: () => import('./features/therapist/therapist.module').then(m => m.TherapistModule) 
   },
-  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'auth/login' } // Wildcard route
+  { 
+    path: 'therapix', 
+    component: MainComponent, 
+    loadChildren: () => import('./features/website/website.module').then(m => m.WebsiteModule) 
+  },
+  { path: '', redirectTo: 'therapix', pathMatch: 'full' },
+  { path: '**', redirectTo: 'therapix' } 
 ];
 
 @NgModule({
