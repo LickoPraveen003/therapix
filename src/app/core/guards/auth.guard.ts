@@ -11,7 +11,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   if (authService.isAuthenticated()) {
     return true;
   } else {
-    router.navigate(['auth/login']);
+    router.navigate(['therapix/login']);
     return false;
   }
 };

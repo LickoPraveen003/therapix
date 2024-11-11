@@ -18,10 +18,6 @@ src/
 │   │   ├── modelPopups/
 │   │   └── shared.module.ts
 │   ├── features/
-│   │   ├── auth/
-│   │   │   ├── loginComponent/
-│   │   │   ├── registerComponent/
-│   │   │   ├── auth-routing.module.ts
 │   │   ├── admin/
 │   │   │   ├── admin-mainComponent/
 │   │   │   ├── dashboardComponent/
@@ -43,6 +39,8 @@ src/
 │   │   │   ├── therapist-routing.module.ts
 │   │   │   └── therapist.module.ts
 │   │   ├── website/
+│   │   │   ├── loginComponent/
+│   │   │   ├── registerComponent/
 │   │   │   ├── mainComponent/
 │   │   │   ├── headerComponent/
 │   │   │   ├── footerComponent/

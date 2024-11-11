@@ -34,7 +34,7 @@ export class AuthInterceptor implements HttpInterceptor {
           if (error.status === 401) {
             // Unauthorized error
             this.authService.logout();
-            this.router.navigate(['auth/login']);
+            this.router.navigate(['therapix/login']);
           }
         }
         console.error(errorMessage);

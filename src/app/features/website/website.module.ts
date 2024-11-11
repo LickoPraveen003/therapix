@@ -11,6 +11,10 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { BookcallComponent } from './bookcall/bookcall.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
+import { ResourceComponent } from './resource/resource.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -23,10 +27,14 @@ import { HeaderComponent } from './header/header.component';
     ContactusComponent,
     BlogsComponent,
     PodcastComponent,
-    BookcallComponent
+    BookcallComponent,
+    ResourceComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     WebsiteRoutingModule
   ]
 })

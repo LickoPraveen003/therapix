@@ -1,56 +1,52 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-white">
   <div class="container-fluid">
     <div class="d-flex justify-content-end w-100">
-      <a class="nav-link" href="#">
+      <a class="nav-link font-13" routerLink="/therapix/register" routerLinkActive="active">
         <i class="fa fa-file-text" aria-hidden="true"></i> Signup
       </a>
-      <a class="nav-link" href="#">
+      <a class="nav-link font-13" routerLink="/therapix/login" routerLinkActive="active">
         <i class="fa fa-sign-in" aria-hidden="true"></i> Login
       </a>
-      <label for="language-select" class="nav-link">Language</label>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
+      <label for="language-select" class="nav-link font-13 mb-0" >Language</label>
+        <select id="language-select" class="btn border font-13" [(ngModel)]="selectedLanguage">
+          <option *ngFor="let lang of languages" [value]="lang.value">{{ lang.display }}</option>
+        </select>
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="../../../../assets/images/logo.webp" alt="Logo" height="50">
+      <img src="../../../../assets/images/logo.webp" alt="Logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" routerLink="/therapix/home" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" routerLink="/therapix/about" routerLinkActive="active">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Resource</a>
+            <a class="nav-link" routerLink="/therapix/resource" routerLinkActive="active">Resource</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Podcast</a>
+            <a class="nav-link" routerLink="/therapix/podcast" routerLinkActive="active">Podcast</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blogs</a>
+            <a class="nav-link" routerLink="/therapix/blogs" routerLinkActive="active">Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" routerLink="/therapix/contact" routerLinkActive="active">Contact Us</a>
         </li>
-      </ul>
-      <button class="btn btn-primary" type="button">Book Call</button>
+    </ul>    
+      <button type="button" class="btn btn-primary callBtn">
+        <i class="fas fa-phone mr-1"></i> Book a Call
+      </button>
     </div>
   </div>
 </nav>
