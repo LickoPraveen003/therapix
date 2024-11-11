@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,4 +17,8 @@ export class HeaderComponent {
   ];
 
   selectedLanguage = 'en';
+  constructor(private router: Router) {}
+  bookCall() {
+    this.router.navigate(['/therapix/bookcall']);
+  }
 }

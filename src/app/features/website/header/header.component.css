@@ -36,6 +36,7 @@
 .nav-link:hover {
   border-radius: 20px;
   background: rgba(121, 165, 242, 0.22);
+  color: #79A5F2 !important;
 }
 
 .callBtn{
@@ -49,5 +50,5 @@
     transition: all 0.2s ease, visibility 0s;
     border-radius: 5px;
     border: 0px solid #F1AA98;
-    background: rgb(121, 165, 242) /*-1.29px -1.53px 8px 3px rgba(191, 191, 191, 0.52)*/;
+    background: #79A5F2 /*-1.29px -1.53px 8px 3px rgba(191, 191, 191, 0.52)*/;
 }

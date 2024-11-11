@@ -16,7 +16,7 @@
 </nav>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/therapix/home" routerLinkActive="active">
       <img src="../../../../assets/images/logo.webp" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,7 +44,7 @@
             <a class="nav-link" routerLink="/therapix/contact" routerLinkActive="active">Contact Us</a>
         </li>
     </ul>    
-      <button type="button" class="btn btn-primary callBtn">
+      <button type="button" class="btn btn-primary callBtn" (click)="bookCall()">
         <i class="fas fa-phone mr-1"></i> Book a Call
       </button>
     </div>
