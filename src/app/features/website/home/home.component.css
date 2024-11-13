@@ -1,0 +1,117 @@
+.home-title{
+    color: #79a5f2;
+  /* font-family: wfont_289b93_a8540441ca6547e9a19659bb168f3fbf, wf_a8540441ca6547e9a19659bb1, orig_hk_grotesk_medium; */
+    letter-spacing: 0em;
+    font-style: normal;
+    font-size: 55px;
+    font-weight: 500;
+    transition: inherit;
+    line-height: 0.9em;
+    margin-bottom: 4rem;
+}
+.content-layout{
+    display: inline-grid;
+    margin: 240px 0px;
+}
+.moreBtn{
+    transition: all 0.2s ease, visibility 0s;
+    background: rgba(121, 165, 242, 0);
+    border: 2px solid #404040;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.moreBtn:hover{
+    background: #404040;
+    color: #FFFFFF;
+}
+.home-content{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 4rem;
+}
+.pad-85{
+    padding: 0px 0px 0px 85px
+}
+.learnBtn{
+    transition: all 0.2s ease, visibility 0s;
+    background: #79a5f2;
+    border: 1px solid #79A5F2;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.learnBtn:hover{
+    background: rgb(136, 171, 233);
+    color: #FFFFFF;
+}
+.sendBtn{
+    background-color: #f1aa98;
+    transition: all 0.2s ease, visibility 0s;
+    border: 1px solid #f1aa98;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+}
+.sendBtn:hover{
+    background: white;
+    color: #f1aa98;
+}
+.feedback-title{
+    text-align: center;
+    font-size: 30px;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 500;
+}
+.feedback-content{
+    background: #a3ddc5;
+    padding: 50px;
+    height: 400px;
+}
+.feedback{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bottom{
+    position: relative;
+    bottom: -100px;
+}
+@media (max-width: 992px) {
+    .flex-direction{
+        flex-direction: column-reverse;
+    }
+    .pad-85 {
+        padding: 0px 18px 0px 0px;
+    }
+    .content-layout{
+        margin: 40px 0px;
+    }
+}
+@media (max-width: 500px) {
+    .home-title{
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+    .home-content{
+        font-size: 12px;
+        margin-bottom: 2rem;
+    }
+    .pad-85 {
+        padding: 0px 7px 0px 0px;
+    }
+    .feedback-title{
+        font-size: 20px;
+    }
+    .feedback-content{
+        padding: 30px;
+    }
+}
