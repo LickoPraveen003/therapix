@@ -1,15 +1,56 @@
-.bg-footer{
-  background: #79A5F2
+footer{
+  background-color: #79a5f2ab;
+  height: 200px;
 }
-.btn-outline-light {
-  color: #212529;
-  border-color: #f8f9fa;
-  border-radius: 30px;
+.sendBtn{
+  background-color: #f1aa98;
+  transition: all 0.2s ease, visibility 0s;
+  border: 1px solid #f1aa98;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  width: 100%;
   font-size: 16px;
+  font-weight: 500;
+}
+.sendBtn:hover{
   background: white;
+  color: #f1aa98;
 }
-.font-16{
-  font-size: 16px;
+.feedback-title{
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
   font-style: normal;
-  color: #404040;
+  font-weight: 600;
+}
+.feedback-content{
+  background: #a3ddc5;
+  padding: 50px;
+  height: 400px;
+}
+.feedback{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.bottom{
+  position: relative;
+  bottom: 240px;
+}
+.insta-icon{
+  border-radius: 20px;
+  background: black;
+  color: white;
+}
+@media (max-width: 992px) {
+  footer{
+    height: 600px;
+  }
+}
+@media (max-width: 500px) {
+  .feedback-title{
+      font-size: 20px;
+  }
+  .feedback-content{
+      padding: 30px;
+  }
 }
