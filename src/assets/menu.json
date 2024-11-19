@@ -1,0 +1,61 @@
+{
+    "menuItems": [
+      {
+        "label": "Dashboard",
+        "icon": "fas fa-tachometer-alt",
+        "link": "/admin/dashboard",
+        "subMenu": []
+      },
+      {
+        "label": "Orders",
+        "icon": "fas fa-table",
+        "link": "/orders",
+        "subMenu": []
+      },
+      {
+        "label": "Bootstrap",
+        "icon": "fas fa-cogs",
+        "link": "/bootstrap",
+        "subMenu": [
+          { "label": "Item 1", "link": "/bootstrap/item1" },
+          { "label": "Item 2", "link": "/bootstrap/item2" }
+        ]
+      },
+      {
+        "label": "Products",
+        "icon": "fas fa-th-large",
+        "link": "/products",
+        "subMenu": [
+          { "label": "Product 1", "link": "/products/1" },
+          { "label": "Product 2", "link": "/products/2" },
+          { "label": "Product 3", "link": "/products/3" },
+          { "label": "Product 4", "link": "/products/4" }
+        ]
+      },
+      {
+        "label": "Customers",
+        "icon": "fas fa-users",
+        "link": "/customers",
+        "subMenu": []
+      },
+      {
+        "label": "Users",
+        "icon": "fas fa-users-cog",
+        "link": "/users",
+        "subMenu": []
+      },
+      {
+        "label": "Video Library",
+        "icon": "fas fa-video",
+        "link": "/video-library",
+        "subMenu": []
+      },
+      {
+        "label": "Courses",
+        "icon": "fas fa-book",
+        "link": "/courses",
+        "subMenu": []
+      }
+    ]
+  }
+  

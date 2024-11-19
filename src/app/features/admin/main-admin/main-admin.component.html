@@ -1,6 +1,53 @@
-<p>main-admin works!</p>
-<app-header></app-header>
+<app-dashboard-header></app-dashboard-header>
 <div class="content">
-  <router-outlet></router-outlet>
+  <div class="row m-0">
+    <div class="p-0 bg-white sidebar" [ngClass]="{'sidebar-collapsed': isSidebarCollapsed}">
+      <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100">
+
+        <button class="navbar-toggler" (click)="toggleSidebar()" type="button"
+          [attr.aria-expanded]="isSidebarCollapsed ? 'false' : 'true'">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100" id="menu">
+          <li *ngFor="let item of menuItems" class="w-100">
+            <!-- For items without submenus -->
+            <a *ngIf="item.subMenu.length === 0" title="{{item.label}}" [routerLink]="item.link"
+              routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link align-middle">
+              <i class="{{item.icon}} fs-4"></i>
+              <span class="ms-1 d-sm-inline" *ngIf="!isSidebarCollapsed">{{ item.label }}</span>
+              <!-- Show label only if not collapsed -->
+            </a>
+
+            <!-- For items with submenus -->
+            <div *ngIf="item.subMenu.length > 0">
+              <a href="javascript:void(0)" (click)="toggleSubMenu(item)" title="{{item.label}}"
+                class="nav-link align-middle">
+                <i class="{{item.icon}} fs-4"></i>
+                <span class="ms-1 d-sm-inline" *ngIf="!isSidebarCollapsed">{{ item.label }}</span>
+                <!-- Show label only if not collapsed -->
+                <i *ngIf="!isSidebarCollapsed" class="fas fa-chevron-down ms-auto d-sm-inline"></i>
+              </a>
+
+              <!-- Submenu (collapsible) -->
+              <ul [ngClass]="{'collapse': item.isCollapsed, 'show': !item.isCollapsed}" class="nav flex-column ms-1">
+                <li *ngFor="let subItem of item.subMenu">
+                  <a [routerLink]="subItem.link" title="{{item.label}}" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                    <span class="d-sm-inline">{{ subItem.label }}</span> <!-- Show sub-item label -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="col bg-right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-<app-footer></app-footer>
+<app-dashboard-footer></app-dashboard-footer>

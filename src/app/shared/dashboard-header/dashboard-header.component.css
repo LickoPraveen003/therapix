@@ -1,0 +1,79 @@
+.navbar{
+  background-color: #fff1f1 !important;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown-toggle{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dropdown-item:hover{
+  background-color: #fff1f1;
+  color: #404040;
+}
+.dropdown-item:active {
+  background-color: #fff1f1;
+  color: #404040;
+}
+.navbar .navbar-brand img {
+  height: 70px;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.font-13 {
+  font-size: 13px !important;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #404040 !important;
+  letter-spacing: 0em;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  transition: inherit;
+}
+
+/* .nav-link:hover {
+  border-radius: 20px;
+  background: rgba(121, 165, 242, 0.22);
+  color: #79A5F2 !important;
+} */
+
+.callBtn {
+  letter-spacing: 0em;
+  margin-left: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  transition: inherit;
+  border-radius: 5px;
+  border: 0px solid #F1AA98;
+  background: #79A5F2;
+}
+
+.fa-bell {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #404040;
+  cursor: pointer;
+}
+
+.fa-bell:hover {
+  color: #79A5F2;
+}
+
+@media (max-width: 400px) {
+  .login-section {
+    display: contents;
+  }
+}

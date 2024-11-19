@@ -1,23 +1,25 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    FooterComponent
+    DashboardHeaderComponent,
+    DashboardFooterComponent,
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
-    HeaderComponent,
-    FooterComponent
+    DashboardHeaderComponent,
+    DashboardFooterComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

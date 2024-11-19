@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-
+  constructor(private router: Router) {}
+  navigateToHome(): void {
+    this.router.navigate(['/admin/dashboard']);  // '/home' is the path to your home route
+  }
 }
