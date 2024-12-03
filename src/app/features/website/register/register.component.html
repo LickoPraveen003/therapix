@@ -1,1 +1,208 @@
-<p>register works!</p>
+<div class="banner-section">
+  <div class="mask">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="row m-0 text-center">
+        <span class="banner-title">Sign up</span>
+        <span class="">Home | Sign up</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5" *ngIf="!isUser">
+  <div class="col-12">
+    <div class="row m-0 align-items-center text-center">
+      <p class="page-title">
+        <span class="caring">Caring,</span><span class="teaching">Teaching</span> and <span class="working">Working
+        </span>with a child with additional needs means you
+        need extra support
+      </p>
+      <p class="page-content">sign up to Therapix to find out how you can home and school programs can be made simplier
+      </p>
+      <div class="row m-0 mt-5">
+        <!-- Parent Card -->
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="card mb-3 card-bg-1" (click)="openSignupForm('Parents')">
+            <div class="row m-0">
+              <div class="col-12 align-center">
+                <!-- Image at the top with white background and rounded corners -->
+                <img src="../../../../assets/images/video.png" height="150px" width="150px" alt="..."
+                  class="rounded-img">
+              </div>
+              <div class="col-12 align-center">
+                <!-- Card content below the image -->
+                <div class="card-body">
+                  <h1 class="card-title">Parents</h1>
+                  <span class="card-text">Over 1000 parents joined with us</span>
+                  <div class="text-center mt-2">
+                    <img src="../../../../assets/images/right-up.png" height="30px" width="auto" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher Card -->
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="card mb-3 card-bg-2" (click)="openSignupForm('Teachers')">
+            <div class="row m-0">
+              <div class="col-12 align-center">
+                <!-- Image at the top with white background and rounded corners -->
+                <img src="../../../../assets/images/invite.png" height="150px" width="150px" alt="..."
+                  class="rounded-img">
+              </div>
+              <div class="col-12 align-center">
+                <!-- Card content below the image -->
+                <div class="card-body">
+                  <h1 class="card-title">Teachers</h1>
+                  <span class="card-text">Joined 500 fully trained teachers</span>
+                  <div class="text-center mt-2">
+                    <img src="../../../../assets/images/right-up.png" height="30px" width="auto" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Therapist Card -->
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="card mb-3 card-bg-3" (click)="openSignupForm('Therapist')">
+            <div class="row m-0">
+              <div class="col-12 align-center">
+                <!-- Image at the top with white background and rounded corners -->
+                <img src="../../../../assets/images/plan.png" height="150px" width="150px" alt="..."
+                  class="rounded-img">
+              </div>
+              <div class="col-12 align-center">
+                <!-- Card content below the image -->
+                <div class="card-body">
+                  <h1 class="card-title">Therapist</h1>
+                  <span class="card-text">Caring for over 20,000 children</span>
+                  <div class="text-center mt-2">
+                    <img src="../../../../assets/images/right-up.png" height="30px" width="auto" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="container mt-5" *ngIf="isUser">
+  <div class="col-12">
+    <div class="row m-0 align-items-center">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div>
+          <img src="../../../../assets/images/invite.png" width="100%" height="auto" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="shadow bg-white rounded">
+          <form class="container p-5 border rounded" [formGroup]="signupForm">
+            <div class="d-flex align-items-center">
+              <span class="signup-title">Get Started</span>
+              <span class="signup-user">as {{this.role}}</span>
+            </div>
+
+            <div *ngIf="errMsg.length > 0" class="alert alert-danger">
+              <span *ngFor="let msg of errMsg">{{msg}}</span>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="firstname" class="form-control" maxlength="50"
+                [inputConditions]="'alphanumericOnly'" placeholder="First Name" formControlName="firstname">
+              <div *ngIf="signupForm.get('firstname')?.invalid && signupForm.get('firstname')?.touched">
+                <small class="text-danger" *ngIf="signupForm.get('firstname')?.errors?.['required']">First Name is
+                  required.</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="lastname" class="form-control" maxlength="50"
+                [inputConditions]="'alphanumericOnly'" placeholder="Last Name" formControlName="lastname">
+              <div *ngIf="signupForm.get('lastname')?.invalid && signupForm.get('lastname')?.touched">
+                <small class="text-danger" *ngIf="signupForm.get('lastname')?.errors?.['required']">Last Name is
+                  required.</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="schoolname" class="form-control" maxlength="50"
+                [inputConditions]="'alphanumericOnly'" placeholder="School Name" formControlName="schoolname">
+              <div *ngIf="signupForm.get('schoolname')?.invalid && signupForm.get('schoolname')?.touched">
+                <small class="text-danger" *ngIf="signupForm.get('schoolname')?.errors?.['required']">Last Name is
+                  required.</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email id" formControlName="email">
+              <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                <small class="text-danger" *ngIf="signupForm.get('email')?.errors?.['required']">Email is
+                  required.</small>
+                <small class="text-danger" *ngIf="signupForm.get('email')?.errors?.['email']">Please enter a valid
+                  email.</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="phoneno" class="form-control" maxlength="10" [inputConditions]="'numberOnly'"
+                placeholder="Phone Number" formControlName="phoneno">
+              <div *ngIf="signupForm.get('phoneno')?.invalid && signupForm.get('phoneno')?.touched">
+                <small class="text-danger" *ngIf="signupForm.get('phoneno')?.errors?.['required']">Phone Number is
+                  required.</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="eye-Icon">
+                <i class="fa eyeIcon" [ngClass]="passwordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash'"
+                  (click)="togglePasswordVisibility('password')"></i>
+              </div>
+              <input [type]="passwordFieldType" id="password" class="form-control" placeholder="Password"
+                formControlName="password">
+              <div *ngIf="signupForm.get('password')!.invalid && signupForm.get('password')!.touched">
+                <small class="text-danger" *ngIf="signupForm.get('password')!.errors?.['required']">Password is
+                  required.</small>
+                <small class="text-danger" *ngIf="signupForm.get('password')!.errors?.['minlength']">Password must be
+                  at least 6 characters long.</small>
+                <small class="text-danger" *ngIf="signupForm.get('password')!.errors?.['passwordStrength']">{{
+                  signupForm.get('password')!.errors?.['passwordStrength'] }}</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="eye-Icon">
+                <i class="fa eyeIcon" [ngClass]="confirmPasswordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash'"
+                  (click)="togglePasswordVisibility('confirmPassword')"></i>
+              </div>
+              <input [type]="confirmPasswordFieldType" id="confirmPassword" class="form-control"
+                placeholder="Confirm Password" formControlName="confirmPassword">
+              <div *ngIf="signupForm.get('confirmPassword')!.invalid && signupForm.get('confirmPassword')!.touched">
+                <small class="text-danger" *ngIf="signupForm.get('confirmPassword')!.errors?.['required']">Confirm
+                  Password is required.</small>
+                <small class="text-danger" *ngIf="signupForm.errors?.['mismatch']">Passwords must match.</small>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <div class="terms-condition">
+                <input type="checkbox" formControlName="termsAndConditions" id="termsAndConditions"
+                  [ngClass]="{'is-invalid': signupForm.get('termsAndConditions')?.invalid && signupForm.get('termsAndConditions')?.touched}" />
+                <a href="#">Terms and Conditions</a>
+              </div>
+            </div>
+            <button type="button" class="btn submitBtn" (click)="onSubmit()" [disabled]="signupForm.invalid">
+              Sign up
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

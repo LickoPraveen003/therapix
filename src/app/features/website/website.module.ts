@@ -11,10 +11,12 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { BookcallComponent } from './bookcall/bookcall.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResourceComponent } from './resource/resource.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     CommonModule,
     FormsModule,
-    WebsiteRoutingModule
+    ReactiveFormsModule,
+    WebsiteRoutingModule,
+    ToastrModule.forRoot(),
+    SharedModule
   ]
 })
 export class WebsiteModule { }

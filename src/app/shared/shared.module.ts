@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.component';
+import { InputConditionsDirective } from './directives/input-conditions.directive';
 
 
 
@@ -11,6 +12,7 @@ import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.co
   declarations: [
     DashboardHeaderComponent,
     DashboardFooterComponent,
+    InputConditionsDirective
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.co
   ],
   exports: [
     DashboardHeaderComponent,
-    DashboardFooterComponent
+    DashboardFooterComponent,
+    InputConditionsDirective
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

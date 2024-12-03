@@ -1,1 +1,53 @@
-<p>login works!</p>
+<div class="banner-section">
+    <div class="mask">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="row m-0 text-center">
+                <span class="banner-title">Login</span>
+                <span class="">Home | Login</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="col-12">
+        <div class="row m-0 align-items-center">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div>
+                    <img src="../../../../assets/images/invite.png" width="100%" height="auto" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="shadow bg-white rounded">
+                    <form class="container p-5 border rounded" [formGroup]="loginForm">
+                      <div *ngIf="errMsg.length > 0" class="alert alert-danger">
+                        <span *ngFor="let msg of errMsg">{{msg}}</span>
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="email">Email</label> -->
+                        <input type="text" id="email" class="form-control" placeholder="Email id" formControlName="email">
+                        <div *ngIf="loginForm.get('email')!.invalid && loginForm.get('email')!.touched">
+                          <small class="text-danger" *ngIf="loginForm.get('email')!.errors?.['required']">Email is required.</small>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="password">Password</label> -->
+                        <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password">
+                        <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched">
+                          <small class="text-danger" *ngIf="loginForm.get('password')!.errors?.['required']">Password is required.</small>
+                          <small class="text-danger" *ngIf="loginForm.get('password')!.errors?.['minlength']">Password must be at least 6 characters long.</small>
+                          <small class="text-danger" *ngIf="loginForm.get('password')!.errors?.['passwordStrength']">{{ loginForm.get('password')!.errors?.['passwordStrength'] }}</small>
+                        </div>
+                      </div>
+                      <div class="btn-section">
+                        <a class="forgot-pass">Forgot Password</a>
+                        <button type="button" class="btn submitBtn" [disabled]="loginForm.invalid" (click)="onSubmit()">Login</button>
+                      </div>
+                      <div (click)="navigateToSignup()">
+                        <span class="forgot-pass">Don't have an account? </span><a class="text-decoration-none pointer">signup</a>
+                      </div>
+                    </form>
+                  </div>  
+            </div>
+        </div>
+    </div>
+</div>

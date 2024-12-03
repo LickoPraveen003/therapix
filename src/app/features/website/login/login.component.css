@@ -1,0 +1,57 @@
+.banner-section{
+    /* background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp'); */
+    height: 400px;
+}
+.mask{
+    background-color: #e0ebf8;
+    height: 400px;
+}
+.banner-title{
+    font-size: 30px;
+    color: #404040;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.forgot-pass{
+    color: #9d9d9d;
+    font-weight: 500;
+    cursor: pointer;
+}
+.form-control{
+    margin-top: 20px;
+    height: 50px;
+}
+.btn-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+.submitBtn{
+    background-color: #5c8ce1;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+}
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}  
+@media (max-width: 992px) {
+    .banner-section{
+        height: 300px;
+    }
+    .mask{
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner-section{
+        height: 200px;
+    }
+    .mask{
+        height: 200px;
+    }
+}

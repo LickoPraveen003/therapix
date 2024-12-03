@@ -47,10 +47,22 @@
         height: 50%;
         width: 50%;
     }
+    .banner-section{
+        height: 300px;
+    }
+    .mask{
+        height: 300px;
+    }
 }
 
 @media (max-width: 500px) {
     .mar-100{
         margin: 20px 0px;
     } 
+    .banner-section{
+        height: 200px;
+    }
+    .mask{
+        height: 200px;
+    }
 }
